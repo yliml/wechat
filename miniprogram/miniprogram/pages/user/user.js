@@ -27,18 +27,18 @@ Page({
     } else if (this.data.canIUse) {
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
+      app.userInfoReadyCallback = async res => {
         this.setData({
           userInfo: res.userInfo,
           hasUserInfo: true
         })
 
-        this.addUser(res.userInfo)
+        await this.addUser(res.userInfo)
       }
     } else {
       // 在没有 open-type=getUserInfo 版本的兼容处理
       wx.getUserInfo({
-        success: res => {
+        success: async res => {
           app.globalData.userInfo = res.userInfo
 
           this.setData({
@@ -46,7 +46,7 @@ Page({
             hasUserInfo: true
           })
 
-          this.addUser(app.globalData.userInfo)
+          await this.addUser(app.globalData.userInfo)
         }
       })
     }
