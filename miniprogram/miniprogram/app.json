@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/user/user",
+    "pages/photos/photos",
+    "pages/index/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/photos/add"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "我的相册",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#fdc21c",
+    "list": [
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的"
+      },
+      {
+        "pagePath": "pages/photos/photos",
+        "text": "相册"
+      }
+    ]
+  },
+  "debug": true,
+  "cloud": true,
+  "disableScroll": true
+}
