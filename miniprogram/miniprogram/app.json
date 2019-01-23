@@ -28,6 +28,10 @@
       {
         "pagePath": "pages/photos/photos",
         "text": "相册"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "云Demo"
       }
     ]
   },
